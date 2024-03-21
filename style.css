@@ -1,0 +1,91 @@
+body {
+    background-color: #db960b;
+}
+h1 {
+    color: #ffffff;
+    font-family: 'Arial', sans-serif;
+    font-size: 36px; 
+    text-align: center;
+    margin-top: 50px; 
+}
+.container {
+    margin-left: 20%;
+    position: relative;
+    z-index: 1000;
+}
+
+.container_choice {
+    margin-left: 70%;
+    position: relative;
+    margin-top: 5%;
+    z-index: 1000;
+}
+
+.container_choice .topping {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.container_choice .topping input[type="checkbox"] {
+    display: none;
+}
+
+.container_choice .topping label {
+    cursor: pointer;
+    padding: 8px 12px;
+    border-radius: 5px;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    transition: background-color 0.3s, border-color 0.3s;
+    width: 150px; 
+    text-align: center; 
+}
+
+.container_choice .topping label:hover {
+    background-color: #f0f0f0;
+    border-color: #999;
+}
+
+.container_choice .topping input[type="checkbox"]:checked + label {
+    background-color: #6d4304;
+    border-color: #7b5303;
+    color: #fff;
+}
+
+.container_choice .topping img {
+    display: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.container_choice .topping input[type="checkbox"]:checked + label + img {
+    display: block;
+}
+.pizza-base img,
+.tomato-sauce img,
+.cheese img {
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.redPepper img,
+.onion img,
+.spinach img,
+.tomato img,
+.mushroom img,
+.chicken img,
+.capscicum img,
+.hempSeed img,
+.onion img,
+.corn img,
+.broccoli img,
+.pinapples img,
+.garlicSauce img {
+    display: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+}

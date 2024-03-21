@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css?family=Amatic+SC|Shadows+Into+Light" rel="stylesheet">
+    <link href="style.css" rel="stylesheet">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Choose your toppings</h1>
+    <div class="container">
+        <div class="pizza-base">
+            <img src="images/pizza.png" alt="Pizza Base">
+            <div class="tomato-sauce">
+                <img src="images/chili-sauce-2.png" alt="Tomato Sauce">
+                <div class="cheese">
+                    <img src="images/parmasen-cheese.png" alt="Cheese">
+                    <div class="redPepper">
+                        <img src="images/red-peppers.png" alt="Red">
+                    </div>
+                    <div class="onion">
+                        <img src="images/onions.png" alt="onion">
+                    </div>
+                    <div class="spinach">
+                        <img src="images/spinach.png" alt="spinach">
+                    </div>
+                    <div class="tomato">
+                        <img src="images/tomato topping.png" alt="tomato">
+                    </div>
+                    <div class="mushroom">
+                        <img src="images/mushrooms.png" alt="mushroom">
+                    </div>
+                    <div class="chicken">
+                        <img src="images/chicken.png" alt="chicken">
+                    </div>
+                    <div class="capscicum">
+                        <img src="images/Capscicum-3.png" alt="capscicum">
+                    </div>
+                    <div class="hempSeed">
+                        <img src="images/hemp seed topping.png" alt="hempseed">
+                    </div>
+                    <div class="onion">
+                        <img src="images/onions.png" alt="onion">
+                    </div>
+                    <div class="corn">
+                        <img src="images/onions.png" alt="onion">
+                    </div>
+                    <div class="broccoli">
+                        <img src="images/broccoli-1.png" alt="broccoli">
+                    </div>
+                    <div class="pinapples">
+                        <img src="images/pineapples.png" alt="pinapples">
+                    </div>
+                    <div class="garlicSauce">
+                        <img src="images/garlic-aoli-sauce-top.png" alt="garlicSauce">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container_choice">
+        <div class="topping red_pepper">
+            <input type="checkbox" id="redPepperCheckbox" value="redPepper">
+            <label for="redPepperCheckbox">Red Pepper</label>
+        </div>
+        <div class="topping onion">
+            <input type="checkbox" id="onionCheckbox" value="onion">
+            <label for="onionCheckbox">Onion</label>
+        </div>
+        <div class="topping spinach">
+            <input type="checkbox" id="spinachCheckbox" value="spinach">
+            <label for="spinachCheckbox">Spinach</label>
+        </div>
+        <div class="topping tomato">
+            <input type="checkbox" id="tomatoCheckbox" value="tomato">
+            <label for="tomatoCheckbox">Tomato</label>
+        </div>
+        <div class="topping mushroom">
+            <input type="checkbox" id="mushroomCheckbox" value="mushroom">
+            <label for="mushroomCheckbox">Mushroom</label>
+        </div>
+        <div class="topping chicken">
+            <input type="checkbox" id="chickenCheckbox" value="chicken">
+            <label for="chickenCheckbox">Chicken</label>
+        </div>
+        <div class="topping capscicum">
+            <input type="checkbox" id="capscicumCheckbox" value="capscicum">
+            <label for="capscicumCheckbox">Capscicum</label>
+        </div>
+        <div class="topping hempseed">
+            <input type="checkbox" id="hempseedCheckbox" value="hempSeed">
+            <label for="hempseedCheckbox">Hemp Seed</label>
+        </div>
+        <div class="topping corn">
+            <input type="checkbox" id="cornCheckbox" value="corn">
+            <label for="cornCheckbox">Corn</label>
+        </div>
+        <div class="topping broccoli">
+            <input type="checkbox" id="broccoliCheckbox" value="broccoli">
+            <label for="broccoliCheckbox">Broccoli</label>
+        </div>
+        <div class="topping pinapples">
+            <input type="checkbox" id="pinapplesCheckbox" value="pinapples">
+            <label for="pinapplesCheckbox">Pinapples</label>
+        </div>
+        <div class="topping garlicSauce">
+            <input type="checkbox" id="garlicSauceCheckbox" value="garlicSauce">
+            <label for="garlicSauceCheckbox">Garlic Sauce</label>
+        </div>
+    </div>
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const checkboxes = document.querySelectorAll('.container_choice .topping input[type="checkbox"]');
+
+            checkboxes.forEach(function (checkbox) {
+                checkbox.addEventListener('change', function () {
+                    const toppingName = this.value;
+                    const toppingImages = document.querySelectorAll(`.pizza-base .${toppingName} img`);
+
+                    toppingImages.forEach(function (toppingImage) {
+                        if (checkbox.checked) {
+                            toppingImage.style.display = 'block'; // Show topping image
+                        } else {
+                            toppingImage.style.display = 'none'; // Hide topping image
+                        }
+                    });
+                });
+            });
+        });
+    </script>
+</body>
+</html>
